@@ -1,1 +1,3 @@
+step_definitions/Hooks.class
+step_definitions/SignupSteps.class
 testrunner/TestRunner.class
