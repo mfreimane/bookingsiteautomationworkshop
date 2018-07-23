@@ -11,5 +11,11 @@ Feature: Sign-up feature
     And I enter email address
     And I enter password
     And confirm password
-    And I select sign up button
+    And I select sign-up button
+    Then user account page is opened
+
+  Scenario: Unsuccessfull sign-up
+    Given I have opened homepage
+    When I select my acc menu
+    And I select sign-up button
     Then user account page is opened
