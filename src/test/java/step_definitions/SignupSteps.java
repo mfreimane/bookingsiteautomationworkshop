@@ -12,14 +12,14 @@ public class SignupSteps {
         System.out.println("OPEN HOMEPAGE");
     }
 
-    @When("^I select my acc menu$")
+    @When("^I select MY ACCOUNT$")
     public void iSelectMyAccMenu() throws Throwable {
         selectMyAccMenu();
     }
 
-    @And("^I select sign-up button$")
-    public void iSelectSignUpButton() throws Throwable {
-       selectSignUpButton();
+    @And("^I select sign up button$")
+    public void iClickOnSignUpButton() throws Throwable {
+      clickOnSignUpButton();
     }
 
     @And("^I enter First name$")
@@ -47,12 +47,12 @@ public class SignupSteps {
         enterPassword();
     }
 
-    @And("^confirm password$")
+    @And("^I confirm password$")
     public void confirmPassword() throws Throwable {
-        enterPassword();
+        confirmEnteredPassword();
     }
 
-    @Then("^user account page is opened$")
+    @Then("^I successfully sign up$")
     public void userAccountPageIsOpened() throws Throwable {
         System.out.println("ACCOUNT CREATED!");
     }
