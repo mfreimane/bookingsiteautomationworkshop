@@ -7,4 +7,9 @@ public class AccountSteps {
     public void userAccountPageIsOpened() throws Throwable {
         System.out.println("ACCOUNT CREATED!");
     }
+    @Then("^I successfully logged in$")
+    public void iSuccessfullyLoggedIn() throws Throwable {
+        System.out.println("REGULAR_USER IS SUCCESSFULLY LOGGED IN!");
+//        successfullyLoggedIn();
+    }
 }

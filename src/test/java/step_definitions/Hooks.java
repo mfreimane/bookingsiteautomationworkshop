@@ -11,7 +11,6 @@ public class Hooks {
 
     @Before
     public void launchBrowser() {
-
         System.setProperty("selenide.browser", CHROME);
     }
 
@@ -24,6 +23,5 @@ public class Hooks {
     public void closeBrowser() {
         close();
     }
-
 
 }

@@ -15,7 +15,7 @@ public class SignupSteps {
 
     private SignUpPageObject signup =  new SignUpPageObject();
     private User user = new User();
-    private User usertwo= new User("Janis", "Berzins");
+//    private User usertwo= new User("Janis", "Berzins");
 
     @And("^I enter First name$")
     public void iEnterFirstName() throws Throwable {
