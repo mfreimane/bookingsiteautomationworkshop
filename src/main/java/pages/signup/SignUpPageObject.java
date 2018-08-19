@@ -11,31 +11,31 @@ import static com.codeborne.selenide.Selenide.page;
 public class SignUpPageObject {
 
     private SelenideElement getFirstNamefield() {
-        return $("test");
+        return $("input[name='firstname']");
     }
 
     private SelenideElement getLasttNamefield() {
-        return $("test");
+        return $("input[name='lastname']");
     }
 
     private SelenideElement getMobileNumberfield() {
-        return $("test");
+        return $("input[name='phone']");
     }
 
     private SelenideElement getEmailfield() {
-        return $("test");
+        return $("input[name='email']");
     }
 
     private SelenideElement getPasswordfield() {
-        return $("test");
+        return $("input[name='password']");
     }
 
     private SelenideElement getConfirmPasswordfield() {
-        return $("test");
+        return $("input[name='confirmpassword']");
     }
 
     private SelenideElement getSignUpButton() {
-        return $("test");
+        return $(".btn-lg");
     }
 
     public void enterFirstName(String firstname) {

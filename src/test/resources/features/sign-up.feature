@@ -1,6 +1,7 @@
 Feature: Sign-up feature
   This feature is about creating new acc in the system
 
+
   Scenario: Successfull sign-up
     Given I have opened homepage
     When I select MY ACCOUNT
@@ -11,4 +12,5 @@ Feature: Sign-up feature
     And I enter email address
     And I enter password
     And I confirm password
+    And I select sign up button in SignUp page
     Then I successfully sign up
