@@ -25,11 +25,12 @@ import static org.junit.Assert.assertFalse;
 public class LoginPageObject {
     WebDriver driver = new ChromeDriver();
     private SelenideElement getEmailfield() {
-        return $("test");
+        return $("input[name = 'username']");
     }
     private SelenideElement getPasswordfield() {
-        return $("test");
+        return $("input[name = 'password']");
     }
+    private SelenideElement getLoginButton() { return $(".btn-lg"); }
 
     public void enterEmailAddress(String email) {
         getEmailfield().sendKeys(email);
@@ -51,6 +52,11 @@ public class LoginPageObject {
             rememberMe.click();
 
         assertFalse(rememberMe.isSelected());
+    }
+
+    public AccountPageObject selectLoginButtonInLoginForm() {
+        getLoginButton().click();
+        return page(AccountPageObject.class);
     }
 }
 ////    private WebElementSelector driver;
