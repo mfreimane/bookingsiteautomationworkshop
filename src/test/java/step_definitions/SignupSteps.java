@@ -19,7 +19,6 @@ public class SignupSteps {
     public SignupSteps(TestContext testContext){
         this.test = testContext;
 
-
     }
 //    private SignUpPageObject signup =  new SignUpPageObject();
 //    private User user = new User();
@@ -56,9 +55,28 @@ public class SignupSteps {
     }
 
     @And("^I select sign up button in SignUp page$")
-    public void iSelectSignUpButtonInSignUpPage() throws Throwable {
+    public void iSelectSignUpButtonInSignUpPage()  {
+//        Thread.sleep(1000);
         test.getSignUpPage().selectSignUpButton();
     }
+
+//    @And("^And I have created new account$")
+//    public void andIHaveCreatedNewAccount() throws Throwable {
+//        // Write code here that turns the phrase above into concrete actions
+//        throw new PendingException();
+//    }
+
+    @And("^I have created new account$")
+    public void newAccountcreated() {
+        iEnterFirstName();
+        iEnterLastName();
+        iEnterMobilePhoneNumber();
+        iEnterEmailAddress();
+        iEnterPassword();
+        confirmPassword();
+        iSelectSignUpButtonInSignUpPage();
+
+}
 //    @And("^I create new account$")
 //    public void iCreateNewAccount() throws Throwable {
 //        iEnterFirstName();
