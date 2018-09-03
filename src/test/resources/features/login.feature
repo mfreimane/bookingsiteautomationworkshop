@@ -15,10 +15,9 @@ Feature: Login feature
 #    And I check "Remember me" checkbox
 #    Then I successfully logged in
 
- @TEST
  Scenario: Succesfull login
-    Given I have opened homepage
-    And I am in Signup form
+   Given I have opened homepage
+   And I am in Signup form
    And I have created new account
    And I select User Account button
    When I select Logout button in Navigation bar
