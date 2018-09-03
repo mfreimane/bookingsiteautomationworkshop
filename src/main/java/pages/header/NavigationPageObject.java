@@ -14,7 +14,11 @@ public class NavigationPageObject {
 //    private SelenideElement MyAccountButton = $("test");
 
     private SelenideElement getMyAccountButton() {
-        return $x("//div[@id='collapse']/ul/ul/li[@id='li_myaccount']/a");
+        return $(By.xpath("//nav/descendant::li[@id='li_myaccount']/a"));
+    }
+
+    private SelenideElement getUserAccountButton(String username) {
+        return $(By.xpath("//nav/descendant::a[contains(text(), '" + username + "')]"));
     }
 
     private SelenideElement getSignUpButton() {
@@ -22,7 +26,7 @@ public class NavigationPageObject {
 
     private SelenideElement getLoginButton() { return $(By.xpath("//nav/descendant::a[contains(text(), 'Login')]")); }
 
-    private SelenideElement getLogoutButton() { return $(""); }
+    private SelenideElement getLogoutButton() { return $(By.xpath("//nav/descendant::a[contains(text(), 'Logout')]")); }
 
     private SelenideElement getUserccountButton(String username) {
         return $(By.xpath("//nav/descendant::a[contains(text(), '" + username + "')]"));
